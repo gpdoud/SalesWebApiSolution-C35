@@ -12,6 +12,8 @@ namespace SalesWebApi.Models {
         public bool Shipped { get; set; }
         [Column(TypeName = "decimal(7,2)")]
         public decimal Total { get; set; }
+        [Required, StringLength(30)]
+        public string Status { get; set; }
 
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
